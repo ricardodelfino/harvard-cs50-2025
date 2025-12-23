@@ -1,0 +1,60 @@
+/*Logo play*/
+.logo {
+    transition: transform 0.5s ease;
+}
+
+.logo:hover {
+    transform: rotate(-40deg);
+}
+
+/*Header Button Icons*/
+nav .bi {
+    margin-right: 5px
+}
+
+#mobileNav .btn-primary {
+    margin-bottom: 3px;
+}
+
+/*Header Buttons effects*/
+.btn-primary {
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #000;
+    border-color: #000;
+}
+
+/*Theme color toogle improvements*/
+body {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+#themeToggle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+#themeIcon {
+    font-size: 1.2rem;
+}
+
+#themeToggle:hover {
+    transform: rotate(35deg);
+}
+
+
+[data-bs-theme="dark"] {
+    --bs-body-bg: #0d1117;
+    --bs-body-color: #e6edf3;
+}
+
+/*Footer*/
+footer:hover {
+    font-style: italic;
+}

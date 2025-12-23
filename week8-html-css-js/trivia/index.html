@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // Check answer 1
+            function checkMultiChoice(event) {
+
+                // Get the element which triggered the event
+                let button = event.target;
+
+                // Check if the element's inner HTML matches expected answer
+                if (button.classList.contains('correct')) {
+                    button.style.backgroundColor = 'Green';
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                } else {
+                    button.style.backgroundColor = 'Red';
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                }
+            }
+
+            // Check answer 2
+            function checkFreeResponse(event) {
+
+                // Get the element which triggered the event
+                let button = event.target;
+
+                // Get the input element corresponding to the button
+                let input = button.parentElement.querySelector('input');
+
+                // Check for correct answer
+                if (input.value === 'the lower class') {
+                    input.style.backgroundColor = 'Green';
+                    input.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                } else {
+                    input.style.backgroundColor = 'Red';
+                    input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice</h2>
+                <hr>
+
+                <h3>
+                    What is a common consequence of an increase in the monetary base carried out by the government or the Federal Reserve,
+                    whether through printing additional money, purchasing assets, or using other modern monetary tools?
+                </h3>
+
+                <li> <button onclick="checkMultiChoice(event)" class='correct'>
+                    It generally leads to higher inflation by increasing the amount of money circulating in the economy.
+                </button></li><br>
+
+                <li> <button onclick="checkMultiChoice(event)" class='incorrect'>
+                    It automatically reduces public debt without affecting prices.
+                </button></li><br>
+
+                <li> <button onclick="checkMultiChoice(event)" class='incorrect'>
+                    It guarantees long-term economic growth without any side effects.
+                </button></li><br>
+
+                <li> <button onclick="checkMultiChoice(event)" class='incorrect'>
+                    It immediately increases productivity across all sectors of the economy.
+                </button></li>
+
+                <p class="feedback"></p>
+            </div>
+
+
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>
+                    What part of the population suffers the most during inflationary periods: the lower class, the middle class, or the upper class?
+                </h3>
+                <input type="text"></input>
+                <button onclick="checkFreeResponse(event)">Submit</button>
+                <p class="feedback"></p>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,25 @@
+**10 HTML tags used:**
+1. <h1> - main titles
+2. <h2> - section headings
+3. <p> - paragraphs
+4. <ul> - lists
+5. <li> - list items
+6. <footer> - page footer
+7. <div> - containers
+8. <a> - links
+9. <body> - the content of the HTML document
+10. <html> - the root element of the HTML page
+
+<-- ================================= -->
+
+**5 CSS properties used in styles.css:**
+1. transition - Adds smooth transitions to elements like the logo and buttons for better user interaction.
+2. transform - Rotates elements on hover, such as the logo and theme toggle button, for visual effects.
+3. background-color - Changes the background on hover for buttons and sets custom dark theme colors.
+4. margin-right - Adds spacing to icons within navigation buttons.
+5. border-radius - Rounds the corners of the theme toggle button to make it circular.
+
+<-- ================================= -->
+
+I chose to use JavaScript for implementing a dynamic theme toggle that switches between light and dark modes based on user preference or system settings.
+I used Bootstrap for responsive layout, navigation collapse on mobile, and pre-styled components like buttons and icons to ensure mobile-friendly design without reinventing common UI elements.
